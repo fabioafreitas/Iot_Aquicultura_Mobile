@@ -18,3 +18,7 @@ Aplicativo desenvolvido com a tecnologia Flutter (https://flutter.dev)
 ---
 
 Desenvolvimento ainda em andamento, então algumas funcionalidades podem não ser funcionais até então...
+
+## Atividades Disciplina
+
+- [Layout em Flutter - Atividade 1.2](https://github.com/fabioafreitas/IotAquiculturaMobile/blob/main/docs/Atividade%20Layouts%20-%20F%C3%A1bio%20Alves%20de%20Freitas.pdf)
