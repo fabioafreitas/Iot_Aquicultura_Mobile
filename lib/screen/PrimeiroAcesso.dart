@@ -22,19 +22,25 @@ class PrimeiroAcesso extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               margin: EdgeInsets.fromLTRB(64, 0, 64, 0),
               child: SizedBox(
-                  width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  child: ElevatedButton(
-                      onPressed: () {}, child: Text('Registrar-se'))),
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.06,
+                child: ElevatedButton(
+                  onPressed: () => Navigator.pushNamed(context, '/cadastro'),
+                  child: Text('Registrar-se'),
+                ),
+              ),
             ),
             Container(
               padding: EdgeInsets.all(8.0),
               margin: EdgeInsets.fromLTRB(64, 0, 64, 64),
               child: SizedBox(
-                  width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  child:
-                      ElevatedButton(onPressed: () {}, child: Text('Entrar'))),
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.06,
+                child: ElevatedButton(
+                  onPressed: () => Navigator.pushNamed(context, '/entrar'),
+                  child: Text('Entrar'),
+                ),
+              ),
             ),
             SocialNetworkButtons(),
           ],

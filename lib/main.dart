@@ -16,16 +16,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Navigator(
-        pages: [
-          MaterialPage(child: PrimeiroAcesso()),
-          MaterialPage(child: Cadastro()),
-          MaterialPage(child: Entrar()),
-        ],
-        onPopPage: (route, result) {
-          return route.didPop(result);
-        },
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => PrimeiroAcesso(),
+        '/entrar': (context) => Entrar(),
+        '/cadastro': (context) => Cadastro(),
+      },
     );
   }
 }
