@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fundamentos_app/screen/Entrar.dart';
-import 'package:fundamentos_app/screen/Cadastro.dart';
-import 'package:fundamentos_app/screen/PrimeiroAcesso.dart';
+
+//Screens
+import 'package:fundamentos_app/screens/Entrar.dart';
+import 'package:fundamentos_app/screens/Cadastro.dart';
+import 'package:fundamentos_app/screens/PrimeiroAcesso.dart';
+import 'package:fundamentos_app/screens/Sensores.dart';
+import 'package:fundamentos_app/screens/Dashboard.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,11 +20,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
+      home: PrimeiroAcesso(),
       routes: {
-        '/': (context) => PrimeiroAcesso(),
+        '/primeiroacesso': (context) => PrimeiroAcesso(),
         '/entrar': (context) => Entrar(),
         '/cadastro': (context) => Cadastro(),
+        '/sensores': (context) => Sensores(),
+        '/dashboard': (context) => Dashboard(),
       },
     );
   }

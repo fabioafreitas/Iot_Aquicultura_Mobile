@@ -13,7 +13,7 @@ class PrimeiroAcesso extends StatelessWidget {
           children: [
             Container(
               child: FaIcon(
-                FontAwesomeIcons.timesCircle,
+                FontAwesomeIcons.fish,
                 size: 170,
               ),
               padding: EdgeInsets.only(bottom: 64),

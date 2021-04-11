@@ -43,10 +43,13 @@ class CredentialsState extends State<Credentials> {
         Container(
           padding: EdgeInsets.all(8.0),
           child: SizedBox(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.06,
-              child: ElevatedButton(
-                  onPressed: () {}, child: Text(widget.buttonName))),
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.06,
+            child: ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/sensores'),
+              child: Text(widget.buttonName),
+            ),
+          ),
         ),
       ],
     );
