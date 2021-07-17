@@ -1,6 +1,6 @@
 {
-    "name": "fundamentos_app",
-    "short_name": "fundamentos_app",
+    "name": "iotaquicultura",
+    "short_name": "iotaquicultura",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

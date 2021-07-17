@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fundamentos_app">
+    package="com.example.iotaquicultura">
    <application
-        android:label="fundamentos_app"
+        android:label="iotaquicultura"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

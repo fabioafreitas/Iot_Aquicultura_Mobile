@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Credentials extends StatefulWidget {
   var buttonName;
 
-  Credentials({Key key, @required this.buttonName}) : super(key: key);
+  Credentials({Key? key, @required this.buttonName}) : super(key: key);
 
   @override
   CredentialsState createState() => CredentialsState();
@@ -46,7 +46,7 @@ class CredentialsState extends State<Credentials> {
             width: double.infinity,
             height: MediaQuery.of(context).size.height * 0.06,
             child: ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, '/sensores'),
+              onPressed: () => Navigator.pushNamed(context, '/cardsdisplay'),
               child: Text(widget.buttonName),
             ),
           ),

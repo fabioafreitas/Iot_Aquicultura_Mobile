@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 //Screens
-import 'package:fundamentos_app/screens/Entrar.dart';
-import 'package:fundamentos_app/screens/Cadastro.dart';
-import 'package:fundamentos_app/screens/PrimeiroAcesso.dart';
-import 'package:fundamentos_app/screens/Sensores.dart';
-import 'package:fundamentos_app/screens/Dashboard.dart';
+import 'package:iotaquicultura/screens/MainContent.dart';
+import 'package:iotaquicultura/screens/TodasAsTelas.dart';
+import 'package:iotaquicultura/screens/main_content_screens/Configuration.dart';
+import 'package:iotaquicultura/screens/main_content_screens/CardsDisplay.dart';
+import 'package:iotaquicultura/screens/main_content_screens/Dashboard.dart';
+import 'package:iotaquicultura/screens/Login.dart';
+import 'package:iotaquicultura/screens/SignIn.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,14 +22,17 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PrimeiroAcesso(),
+      home: TodasAsTelas(),
       routes: {
-        '/primeiroacesso': (context) => PrimeiroAcesso(),
-        '/entrar': (context) => Entrar(),
-        '/cadastro': (context) => Cadastro(),
-        '/sensores': (context) => Sensores(),
+        '/todasastelas': (context) => TodasAsTelas(),
+        '/configuration': (context) => Configuration(),
+        '/cardsdisplay': (context) => CardsDisplay(),
         '/dashboard': (context) => Dashboard(),
+        '/login': (context) => Login(),
+        '/signin': (context) => SignIn(),
+        '/maincontent': (context) => MainContent(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }

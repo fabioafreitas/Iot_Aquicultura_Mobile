@@ -1,4 +1,4 @@
-package com.example.fundamentos_app
+package com.example.iotaquicultura
 
 import io.flutter.embedding.android.FlutterActivity
 
