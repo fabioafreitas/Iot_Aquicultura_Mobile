@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:iotaquicultura/screens/MainContent.dart';
 import 'package:iotaquicultura/screens/TodasAsTelas.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Configuration.dart';
-import 'package:iotaquicultura/screens/main_content_screens/CardsDisplay.dart';
+import 'package:iotaquicultura/screens/main_content_screens/Sensors.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Dashboard.dart';
 import 'package:iotaquicultura/screens/Login.dart';
 import 'package:iotaquicultura/screens/SignIn.dart';
@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/todasastelas': (context) => TodasAsTelas(),
         '/configuration': (context) => Configuration(),
-        '/cardsdisplay': (context) => CardsDisplay(),
+        '/sensors': (context) => Sensors(),
         '/dashboard': (context) => Dashboard(),
         '/login': (context) => Login(),
         '/signin': (context) => SignIn(),

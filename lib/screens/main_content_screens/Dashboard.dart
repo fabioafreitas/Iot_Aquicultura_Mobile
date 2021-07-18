@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iotaquicultura/components/visual/SensorCard.dart';
+import 'package:iotaquicultura/components/visual/SliderChartCard.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -16,41 +18,32 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
-    final double itemWidth = size.width / 2;
-
     return Scaffold(
-        appBar: AppBar(
-          title: Center(child: Text('Dashboard')),
-          automaticallyImplyLeading: false,
-        ),
-        body: Center(
-            child: Column(
-          children: [
-            Text('Dashboard'),
-            Teste(),
-            Teste(),
-          ],
-        )));
-  }
-}
-
-class Teste extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: Colors.grey[200],
-        borderRadius: BorderRadius.circular(6),
-        border: Border.all(
-          color: Colors.black,
-          width: 0.5,
-        ),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Dashboard'),
+        automaticallyImplyLeading: false,
       ),
-      child: Center(
-        child: Text("teste"),
+      body: Center(
+        child: Column(
+          children: [
+            SensorCard(
+              pictureName: 'assets/shrimp/shrimp_color_outlined.png',
+              cardTitle: 'Tanque com Camarões',
+              cardSubtitle: 'Tanque T201',
+            ),
+            SensorCard(
+              pictureName: 'assets/shrimp/shrimp_color_outlined.png',
+              cardTitle: 'Tanque com Camarões',
+              cardSubtitle: 'Tanque T201',
+            ),
+            SensorCard(
+              pictureName: 'assets/shrimp/shrimp_color_outlined.png',
+              cardTitle: 'Tanque com Camarões',
+              cardSubtitle: 'Tanque T201',
+            ),
+          ],
+        ),
       ),
     );
   }

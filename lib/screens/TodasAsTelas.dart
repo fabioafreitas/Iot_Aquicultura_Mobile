@@ -4,10 +4,10 @@ class TodasAsTelas extends StatelessWidget {
   var rotas = [
     'Dashboard',
     'Configuration',
-    'CardsDisplay',
+    'Sensors',
     'Login',
     'SignIn',
-    'MainContent'
+    'MainContent',
   ];
 
   @override

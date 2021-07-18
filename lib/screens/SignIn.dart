@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:iotaquicultura/components/credenciais/ButtonCustom.dart';
-import 'package:iotaquicultura/components/credenciais/InputCustom.dart';
-import 'package:iotaquicultura/components/credenciais/TextButtonCustom.dart';
+import 'package:iotaquicultura/components/credentials/ButtonCustom.dart';
+import 'package:iotaquicultura/components/credentials/InputCustom.dart';
+import 'package:iotaquicultura/components/credentials/TextButtonCustom.dart';
 
 class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('Cadastro'),
       ),
       body: Padding(
@@ -15,7 +16,7 @@ class SignIn extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              child: Image.asset('assets/peixe512inverted.png'),
+              child: Image.asset('assets/logo/peixe512inverted.png'),
               height: 256,
               width: 256,
             ),

@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 
-class CardsDisplay extends StatefulWidget {
-  const CardsDisplay({Key? key}) : super(key: key);
+class Sensors extends StatefulWidget {
+  const Sensors({Key? key}) : super(key: key);
 
   @override
-  _CardsDisplayState createState() => _CardsDisplayState();
+  _SensorsState createState() => _SensorsState();
 }
 
-class _CardsDisplayState extends State<CardsDisplay> {
+class _SensorsState extends State<Sensors> {
+  var tabsList = [
+    'Favoritos',
+    'Tanques',
+    'Temperatura',
+    'pH',
+    'Condutividade',
+    'Oxigênio Dissolvido'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -16,36 +25,17 @@ class _CardsDisplayState extends State<CardsDisplay> {
           appBar: AppBar(
             centerTitle: true,
             leading: Icon(Icons.person_outline),
-            title: Text(
-              'DASHBOARD',
-              style: TextStyle(fontSize: 16.0),
+            title: Text('Sensores'),
+            bottom: TabBar(
+              isScrollable: true,
+              unselectedLabelColor: Colors.white.withOpacity(0.3),
+              indicatorColor: Colors.white,
+              tabs: tabsList
+                  .map((tabName) => Tab(
+                        child: Text(tabName),
+                      ))
+                  .toList(),
             ),
-            bottom: PreferredSize(
-                child: TabBar(
-                    isScrollable: true,
-                    unselectedLabelColor: Colors.white.withOpacity(0.3),
-                    indicatorColor: Colors.white,
-                    tabs: [
-                      Tab(
-                        child: Text('Tab 1'),
-                      ),
-                      Tab(
-                        child: Text('Investment'),
-                      ),
-                      Tab(
-                        child: Text('Your Earning'),
-                      ),
-                      Tab(
-                        child: Text('Current Balance'),
-                      ),
-                      Tab(
-                        child: Text('Tab 5'),
-                      ),
-                      Tab(
-                        child: Text('Tab 6'),
-                      )
-                    ]),
-                preferredSize: Size.fromHeight(30.0)),
             actions: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(right: 16.0),

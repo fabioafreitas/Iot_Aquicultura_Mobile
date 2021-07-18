@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iotaquicultura/screens/main_content_screens/CardsDisplay.dart';
+import 'package:iotaquicultura/screens/main_content_screens/Sensors.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Configuration.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Dashboard.dart';
 
@@ -11,13 +11,11 @@ class MainContent extends StatefulWidget {
 }
 
 class _MainContentState extends State<MainContent> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  int _selectedIndex = 1;
   static const List<Widget> _widgetOptions = <Widget>[
     Configuration(),
     Dashboard(),
-    CardsDisplay(),
+    Sensors(),
   ];
 
   void _onItemTapped(int index) {
