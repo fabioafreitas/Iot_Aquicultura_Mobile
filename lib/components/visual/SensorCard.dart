@@ -36,11 +36,11 @@ class _SensorCardState extends State<SensorCard> {
     double size = MediaQuery.of(context).size.width * 0.1;
     double paddingRow = 20;
     double paddingCard = 5;
-    return InkWell(
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(paddingCard, paddingCard, paddingCard, 0),
-        child: Card(
-          elevation: 3,
+    return Padding(
+      padding: EdgeInsets.fromLTRB(paddingCard, paddingCard, paddingCard, 0),
+      child: Card(
+        elevation: 3,
+        child: InkWell(
           child: Column(
             children: [
               ListTile(
@@ -81,9 +81,9 @@ class _SensorCardState extends State<SensorCard> {
               ),
             ],
           ),
+          onTap: widget.onTap,
         ),
       ),
-      onTap: widget.onTap,
     );
   }
 }

@@ -19,7 +19,7 @@ class Login extends StatelessWidget {
             InputCustom(inputName: 'Email', inputIcon: Icons.email),
             InputCustom(inputName: 'Senha', inputIcon: Icons.lock),
             const SizedBox(height: 30),
-            ButtonCustom(buttonName: 'Entrar', navigationRoute: '/sensors'),
+            ButtonCustom(buttonName: 'Entrar', navigationRoute: '/maincontent'),
             TextButtonCustom(
               textMessage: 'Esqueceu sua senha?',
               textButton: 'Recupere-a',

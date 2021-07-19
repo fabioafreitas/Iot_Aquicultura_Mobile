@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:iotaquicultura/logic/Constants.dart';
 import 'package:iotaquicultura/logic/DojotDevices.dart';
-import 'package:iotaquicultura/screens/main_content_screens/Dashboard.dart';
 import 'dart:async';
 
 //Screens
-import 'package:iotaquicultura/screens/MainContent.dart';
-import 'package:iotaquicultura/screens/TodasAsTelas.dart';
+import 'package:iotaquicultura/screens/main_content_screens/Dashboard.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Configuration.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Sensors.dart';
+import 'package:iotaquicultura/screens/MainContent.dart';
+import 'package:iotaquicultura/screens/TodasAsTelas.dart';
 import 'package:iotaquicultura/screens/Login.dart';
 import 'package:iotaquicultura/screens/SignIn.dart';
 
@@ -22,10 +22,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Timer _timer = new Timer(const Duration(milliseconds: 20000), () {});
+  Timer _timer = new Timer(const Duration(milliseconds: 5000), () {});
 
   generateNewDataValue() {
-    _timer = new Timer(const Duration(milliseconds: 20000), () {
+    _timer = new Timer(const Duration(milliseconds: 5000), () {
       setState(() {
         DojotDevices.temperature.add(doubleInRange(
           DojotDevices.rng,
@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     generateNewDataValue();
     return MaterialApp(
-      home: Dashboard(),
+      home: Login(),
       routes: {
         '/dashboard': (context) => Dashboard(),
         '/todasastelas': (context) => TodasAsTelas(),
