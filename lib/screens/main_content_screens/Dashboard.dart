@@ -40,26 +40,26 @@ class _DashboardState extends State<Dashboard> {
       ),
       body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                _cardGauge(screenWidth, 'Temperatura'),
-                _cardGauge(screenWidth, 'pH'),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                _cardGauge(screenWidth, 'Condutividade'),
-                _cardGauge(screenWidth, 'Oxigênio Dissolvido'),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //     children: [
+          //       _cardGauge(screenWidth, 'Temperatura'),
+          //       _cardGauge(screenWidth, 'pH'),
+          //     ],
+          //   ),
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //     children: [
+          //       _cardGauge(screenWidth, 'Condutividade'),
+          //       _cardGauge(screenWidth, 'Oxigênio Dissolvido'),
+          //     ],
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
             child: _cardLineChart(screenWidth, 'Temperatura'),
@@ -129,16 +129,14 @@ class _DashboardState extends State<Dashboard> {
       minDefaultValue = Temperature.min.toInt();
       maxDefaultValue = Temperature.max.toInt();
       currentValue = DojotDevices.temperature.last.toInt();
-      double percentage = 0.25;
-      minValue = (minDefaultValue - (minDefaultValue * percentage)).toInt();
-      maxValue = (maxDefaultValue + (minDefaultValue * percentage)).toInt();
+      minValue = 10;
+      maxValue = 40;
     } else if (parameterName == 'Condutividade') {
       minDefaultValue = Conductivity.min.toInt();
       maxDefaultValue = Conductivity.max.toInt();
       currentValue = DojotDevices.conductivity.last.toInt();
-      double percentage = 0.05;
-      minValue = (minDefaultValue - (minDefaultValue * percentage)).toInt();
-      maxValue = (maxDefaultValue + (minDefaultValue * percentage)).toInt();
+      minValue = 30000;
+      maxValue = 40000;
     } else if (parameterName == 'pH') {
       minDefaultValue = PH.min.toInt();
       maxDefaultValue = PH.max.toInt();
