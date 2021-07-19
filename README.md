@@ -7,6 +7,8 @@ Testado, até então, somente em dispositivo Android!
 
 ## [Link na Play Store](https://play.google.com/store/apps/details?id=com.fabioafreitas.iotaquicultura)
 
+![](./docs/play_Store.png)
+
 ## Logo
 
 ![](./assets/logo/app_logo.png)
