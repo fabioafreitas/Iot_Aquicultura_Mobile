@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class TodasAsTelas extends StatelessWidget {
   var rotas = [
-    'Dashboard',
     'Configuration',
     'Sensors',
     'Login',
     'SignIn',
     'MainContent',
+    'Dashboard',
   ];
 
   @override

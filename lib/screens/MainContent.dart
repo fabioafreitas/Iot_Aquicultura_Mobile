@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iotaquicultura/screens/main_content_screens/Dashboard.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Sensors.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Configuration.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Dashboard.dart';

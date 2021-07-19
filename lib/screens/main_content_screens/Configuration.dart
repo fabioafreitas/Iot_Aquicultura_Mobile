@@ -41,6 +41,22 @@ Widget _buildLoginConfiguration() {
   );
 }
 
+Widget _buildIconAttribution() {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text('https://www.flaticon.com/free-icon/ph_4236740'),
+      Text('https://www.flaticon.com/premium-icon/shrimp_3071131'),
+      Text('https://www.flaticon.com/free-icon/plugin_2781868'),
+      Text('https://www.flaticon.com/free-icon/thermometer_2426703'),
+      Text('https://www.flaticon.com/premium-icon/fish_3347354'),
+      Text('https://www.flaticon.com/free-icon/oxygen-tank_421266'),
+      Text('https://www.flaticon.com/premium-icon/high-temperature_1585441'),
+      const SizedBox(height: 15),
+    ],
+  );
+}
+
 class ServerStatusIcon extends StatefulWidget {
   const ServerStatusIcon({Key? key}) : super(key: key);
 
@@ -69,12 +85,17 @@ class _ConfigurationState extends State<Configuration> {
     _ItemCustom(
       headerValue: 'Servidor Dojot',
       expandedValue: _buildDojotConfiguration(),
-      isExpanded: true,
+      isExpanded: false,
     ),
     _ItemCustom(
       headerValue: 'Login Atual',
       expandedValue: _buildLoginConfiguration(),
-      isExpanded: true,
+      isExpanded: false,
+    ),
+    _ItemCustom(
+      headerValue: 'Atribuição Ícones',
+      expandedValue: _buildIconAttribution(),
+      isExpanded: false,
     ),
   ];
 
@@ -86,7 +107,7 @@ class _ConfigurationState extends State<Configuration> {
         title: Text("Configurações"),
         automaticallyImplyLeading: false,
       ),
-      body: Column(
+      body: ListView(
         children: [
           _buildPanel(),
         ],
