@@ -5,6 +5,8 @@ Aplicativo para monitoramento de sistema IoT (Internet of Things) voltado à aqu
 App desenvolvido como projeto da Disciplina Fundamentos de Informática Aplicada da UFRPE/PPGIA.
 Testado, até então, somente em dispositivo Android!
 
+## [Link na Play Store](https://play.google.com/store/apps/details?id=com.fabioafreitas.iotaquicultura)
+
 ## Logo
 
 ![](./assets/logo/app_logo.png)
