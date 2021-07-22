@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iotaquicultura/components/visual/SensorCard.dart';
-import 'package:iotaquicultura/logic/Constants.dart';
-import 'package:iotaquicultura/logic/DojotDevices.dart';
+import 'package:iotaquicultura/negocio/constants/ParamConstants.dart';
+import 'package:iotaquicultura/negocio/DojotDevices.dart';
 
 enum TabTypes { tanque, temperatura, ph, oxigenio, condutividade }
 

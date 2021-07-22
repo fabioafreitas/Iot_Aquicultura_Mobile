@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:iotaquicultura/logic/Constants.dart';
-import 'package:iotaquicultura/logic/DojotDevices.dart';
+import 'package:iotaquicultura/negocio/constants/ParamConstants.dart';
+import 'package:iotaquicultura/negocio/DojotDevices.dart';
+import 'package:iotaquicultura/negocio/http/Requests.dart';
+import 'package:iotaquicultura/negocio/models/JwtModel.dart';
 import 'dart:async';
 
 //Screens
@@ -8,7 +10,6 @@ import 'package:iotaquicultura/screens/main_content_screens/Dashboard.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Configuration.dart';
 import 'package:iotaquicultura/screens/main_content_screens/Sensors.dart';
 import 'package:iotaquicultura/screens/MainContent.dart';
-import 'package:iotaquicultura/screens/TodasAsTelas.dart';
 import 'package:iotaquicultura/screens/Login.dart';
 import 'package:iotaquicultura/screens/SignIn.dart';
 
@@ -71,7 +72,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     generateNewDataValue();
     return MaterialApp(
-      home: Login(),
+      home: TodasAsTelas(),
       routes: {
         '/dashboard': (context) => Dashboard(),
         '/todasastelas': (context) => TodasAsTelas(),
@@ -82,6 +83,60 @@ class _MyAppState extends State<MyApp> {
         '/maincontent': (context) => MainContent(),
       },
       debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class TodasAsTelas extends StatefulWidget {
+  @override
+  _TodasAsTelasState createState() => _TodasAsTelasState();
+}
+
+class _TodasAsTelasState extends State<TodasAsTelas> {
+  var rotas = [
+    'Configuration',
+    'Sensors',
+    'Login',
+    'SignIn',
+    'MainContent',
+    'Dashboard',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Row(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: rotas
+                  .map((rota) => ElevatedButton(
+                      onPressed: () => Navigator.pushNamed(
+                          context, ('/' + rota).toLowerCase()),
+                      child: Text(rota)))
+                  .toList(),
+            ),
+            Container(
+              child: FutureBuilder<JWTModel>(
+                future: Requests.getDojotJWT(
+                  username: 'admin',
+                  password: 'admin',
+                ),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    final dados = snapshot.data;
+                    return Text('JWT: ${dados?.jwt}');
+                  } else if (snapshot.hasError) {
+                    return Text('Erro na requisição');
+                  }
+                  return CircularProgressIndicator();
+                },
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

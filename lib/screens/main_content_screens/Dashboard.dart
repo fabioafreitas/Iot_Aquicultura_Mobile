@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:iotaquicultura/logic/Constants.dart';
-import 'package:iotaquicultura/logic/DojotDevices.dart';
+import 'package:iotaquicultura/negocio/constants/ParamConstants.dart';
+import 'package:iotaquicultura/negocio/DojotDevices.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';

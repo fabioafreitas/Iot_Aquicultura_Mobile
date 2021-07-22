@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iotaquicultura/logic/ConnectionStatus.dart';
+import 'package:iotaquicultura/negocio/ConnectionStatus.dart';
 
 Widget _iconSelector(ConnectionStatus? status, double iconSize) {
   Icon? icon;

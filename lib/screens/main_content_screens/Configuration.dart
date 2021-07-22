@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iotaquicultura/components/credentials/ButtonCustom.dart';
 import 'package:iotaquicultura/components/credentials/InputCustom.dart';
 import 'package:iotaquicultura/components/visual/ConnectionStatusIcon.dart';
-import 'package:iotaquicultura/logic/ConnectionStatus.dart';
+import 'package:iotaquicultura/negocio/ConnectionStatus.dart';
 
 // stores ExpansionPanel state information
 class _ItemCustom {
